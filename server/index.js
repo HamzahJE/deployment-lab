@@ -3,21 +3,13 @@ const path= require("path")
 
 const app = express()
 
-app.use(express.static("public"))
+app.use(express.static(path.join(__dirname, "/../public")))
 
-app.get('/', function(req,res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'))
+
+app.get('/home', function(req,res) {
+    res.sendFile(path.resolve(__dirname, '../public/home.html'))
 })
 
-app.get('/js', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/main.js'))
-  })
-
-  app.get('/css', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/styleSheet.css'))
-  })
-  
-  
 
 
 const port = process.env.PORT || 4007
@@ -27,7 +19,3 @@ app.listen(port, () => {
 
 
 
-app.use('/js', express.static(path.join(__dirname, '../public/main.js')))
-
-
-app.use('/css', express.static(path.join(__dirname, '../public/styleSheet.css')))
