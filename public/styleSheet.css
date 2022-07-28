@@ -8,21 +8,28 @@
     font-family: Quicksand;
     font-size: 16pt;
     font-weight: 300;
+    color: #edf0f1;
+
 }
 li , button ,a {
     color: #edf0f1;
     text-decoration: none;
+    
 }
 header{
     display: flex;
-    justify-content: flex-end;
+    justify-content:flex-end;
     align-items: center;
     padding: 30px 10%;
+    
 }
+/* #about{
+    margin-left: 400pt;
+} */
 
 #nav_links{
     list-style: none;
-
+ 
 }
 
 #nav_links li{
@@ -37,15 +44,17 @@ header{
 
 #nav_links li a:hover{
     color: #0088a9;     
+    cursor: pointer;
+
  }
 
 button{
     padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+
 
 }
 
@@ -56,16 +65,29 @@ div{
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    color: #edf0f1;
 }
 img{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    height: 30vh ;
+    display:block;
+    margin-right: auto;    
+    margin-left: auto;
+    height: 85vh ;
+    padding: 8px ;
 }
 
- 
+
+#intro {
+    position: absolute;
+    left: 7%;
+    font-size: 25pt;
+    transition: all 0.3s ease 0s;
+
+}
+
+#intro:hover {
+color: #0088a9;
+transition: all 0.3s ease 0s;
+
+}
 
 
 /* #navBar{
